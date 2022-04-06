@@ -10,7 +10,6 @@ export default function Articles () {
   const { search } = useLocation();
   const queryParams = new URLSearchParams(search);
   const title = queryParams.get('title');
-
   const filteredArticles = title ? filterArticles(title, articles) : Object.values(articles)
 
   return (
